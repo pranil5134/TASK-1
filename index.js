@@ -8,7 +8,7 @@ const fs = require("fs")
 app.get('/gettime', (req, res) => {
     let timestamp = new Date().getTime();
     let Time_stamp = new Date().getDate() + "-" + new Date().getMonth() + "-" + new Date().getFullYear() + "_" + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + ":" + new Date().getMilliseconds()
-    fs.writeFile(`./Time_stamp${timestamp}.txt`, "welcome to time " + `${Time_stamp}`, function (err) {
+    fs.writeFile(`https://github.com/pranil5134/TASK-1/tree/master/Time_stamp${timestamp}.txt`, "welcome to time " + `${Time_stamp}`, function (err) {
 
         if (err) throw err;
         console.log("file is created" + "_" + Time_stamp)
