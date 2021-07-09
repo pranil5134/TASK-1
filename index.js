@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 const fs = require("fs")
 
-
+//The following get function hit  "/gettime" and add a file in same folder with time detail 
 app.get('/gettime', (req, res) => {
     let timestamp = new Date().getTime();
     let Time_stamp = new Date().getDate() + "-" + new Date().getMonth() + "-" + new Date().getFullYear() + "_" + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + ":" + new Date().getMilliseconds()
@@ -16,6 +16,7 @@ app.get('/gettime', (req, res) => {
     res.send("Hello world")
 })
 
+//The following end point get list of file present in a destination folder
 app.get('/getfile', (rq, res) => {
     fs.readdir("E:/Pranil S/GUVI/Nodejs/Nodejs-Task/Task-1", function (err, files) {
 
