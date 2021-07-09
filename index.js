@@ -18,7 +18,7 @@ app.get('/gettime', (req, res) => {
 
 //The following end point get list of file present in a destination folder
 app.get('/getfile', (rq, res) => {
-    fs.readdir("E:/Pranil S/GUVI/Nodejs/Nodejs-Task/Task-1", function (err, files) {
+    fs.readdir("https://github.com/pranil5134/TASK-1/tree/master", function (err, files) {
 
         if (err) throw err;
         let i = 1;
